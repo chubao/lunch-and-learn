@@ -2,7 +2,7 @@
 steps:
 
 # This step builds the container image.
-- name: 'gcr.io/lunch-and-learn/docker'
+- name: 'gcr.io/cloud-builders/docker'
   id: Build
   args:
   - 'build'
@@ -13,7 +13,7 @@ steps:
 # This step pushes the image to Container Registry
 # The PROJECT_ID and SHORT_SHA variables are automatically
 # replaced by Cloud Build.
-- name: 'gcr.io/lunch-and-learn/docker'
+- name: 'gcr.io/cloud-builders/docker'
   id: Push
   args:
   - 'push'
