@@ -8,7 +8,7 @@ steps:
   - 'build'
   - '-t'
   - 'gcr.io/$PROJECT_ID/lunch-and-learn:$SHORT_SHA'
-  - '/source/docker/Dockerfile'
+  - 'source/docker/Dockerfile'
 
 # This step pushes the image to Container Registry
 # The PROJECT_ID and SHORT_SHA variables are automatically
