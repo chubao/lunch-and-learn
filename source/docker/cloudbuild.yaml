@@ -5,13 +5,13 @@ steps:
   args:
   - 'build'
   - '-t'
-  - 'gcr.io/$PROJECT_ID/lunch-and-learn:$SHORT_SHA'
-  - './source/docker/'
+  - 'gcr.io/$PROJECT_ID/lunch-and-learn:$TAG_NAME'
+  - '.'
 
 
 - name: 'gcr.io/cloud-builders/docker'
   id: Push
   args:
   - 'push'
-  - 'gcr.io/$PROJECT_ID/lunch-and-learn:$SHORT_SHA'
+  - 'gcr.io/$PROJECT_ID/lunch-and-learn:$TAG_NAME'
 
