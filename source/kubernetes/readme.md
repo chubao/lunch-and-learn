@@ -2,9 +2,9 @@
 
 ## build docker
 
-1. gcloud builds submit --tag="gcr.io/store-controller/lunch-and-learn:$(git rev-parse --short=7 HEAD)" .
-2. gcloud builds submit --config .\cloudbuild.yaml .
-3. gcloud builds submit --config=cloudbuild.yaml . --substitutions=TAG_NAME="100.100.100.1"
+* gcloud builds submit --tag="gcr.io/store-controller/lunch-and-learn:$(git rev-parse --short=7 HEAD)" .
+* gcloud builds submit --config .\cloudbuild.yaml .
+* gcloud builds submit --config=cloudbuild.yaml . --substitutions=TAG_NAME="100.100.100.1"
 
 <!--
 gcloud container clusters create [CLUSTER_NAME]
@@ -17,11 +17,15 @@ gcloud container clusters get-credentials [CLUSTER_NAME]
 * gcloud container clusters get-credentials lunch-and-learn-1
 
 
-kubectl get pod --all-namespaces -o wide
-kubectl describe pod [POD_NAME] --namespace=kube-system
+## kubectl manual
 
-kubectl apply -f .
-kubectl delete -f .
+* kubectl get pod --all-namespaces -o wide
+* kubectl describe pod [POD_NAME] --namespace=kube-system
+
+* kubectl apply -f .
+* kubectl delete -f .
+
+link --> <https://kubernetes.io/docs/reference/kubectl/cheatsheet/>
 
 ## cleanup cluster
-gcloud container clusters delete [CLUSTER_NAME]
+* gcloud container clusters delete [CLUSTER_NAME]
