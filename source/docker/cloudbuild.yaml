@@ -1,7 +1,5 @@
-# [START cloudbuild]
 steps:
 
-# This step builds the container image.
 - name: 'gcr.io/cloud-builders/docker'
   id: Build
   args:
@@ -10,12 +8,10 @@ steps:
   - 'gcr.io/$PROJECT_ID/lunch-and-learn:$SHORT_SHA'
   - './source/docker/'
 
-# This step pushes the image to Container Registry
-# The PROJECT_ID and SHORT_SHA variables are automatically
-# replaced by Cloud Build.
+
 - name: 'gcr.io/cloud-builders/docker'
   id: Push
   args:
   - 'push'
   - 'gcr.io/$PROJECT_ID/lunch-and-learn:$SHORT_SHA'
-# [END cloudbuild]
+
