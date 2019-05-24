@@ -13,7 +13,7 @@ gcloud container clusters get-credentials [CLUSTER_NAME]
 ## Apply kubernetes.
 
 * gcloud init
-* gcloud container cluster create lunch-and-learn-1
+* gcloud container clusters create lunch-and-learn-1
 * gcloud container clusters get-credentials lunch-and-learn-1
 
 

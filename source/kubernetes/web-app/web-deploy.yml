@@ -17,7 +17,7 @@ spec:
         app: web
     spec:
       containers:
-      - image: gcr.io/store-controller/lunch-and-learn:100.100.100.1
+      - image: gcr.io/store-controller/lunch-and-learn:100.100.100.3
         name: lunch-and-learn
         imagePullPolicy: Always
         ports:
