@@ -16,6 +16,9 @@ gcloud container clusters get-credentials [CLUSTER_NAME]
 * gcloud container clusters create lunch-and-learn-1
 * gcloud container clusters get-credentials lunch-and-learn-1
 
+* gcloud container clusters create auto-scale-test	
+* gcloud container clusters get-credentials auto-scale-test	
+---
 
 ## kubectl manual
 
